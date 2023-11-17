@@ -1,0 +1,61 @@
+.portfolio {
+  padding: 96px 0;
+  @include mobile {
+    padding: 60px 0;
+  }
+  .container {
+    display: block;
+    text-align: center;
+  }
+  &__title {
+    color: $title-color;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 64px;
+
+    span {
+      color: $primary-color;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 64px;
+    }
+  }
+
+  &__desc {
+    margin-top: 24px;
+    margin-bottom: 80px;
+    color: $desc-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    max-width: 461px;
+    margin-inline: auto;
+  }
+
+  &__example {
+    display: flex;
+
+    @include desktop-small {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+
+    @include desktop-small {
+      flex-shrink: inherit;
+    }
+  }
+
+  &__example-group1 {
+    margin-right: 27px;
+  }
+
+  &__example-group2 {
+    margin-right: 31px;
+  }
+
+  &__example-group3 {
+  }
+}

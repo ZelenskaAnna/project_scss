@@ -1,0 +1,70 @@
+.header {
+	padding: 16px 0;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__logo {
+		color: #FFF;
+		font-size: 24px;
+		font-weight: 700;
+		display: flex;
+
+		span {
+			color: $primary-color;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@include tablet {
+			display: inline-block;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		gap: 27px;
+		align-items: center;
+
+		@include tablet {
+			position: fixed;
+			min-width: 250px;
+			width: 30%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			flex-direction: column;
+			background: $primary-color;
+			justify-content: center;
+			transition: $transition;
+			transform: translateX(-120%);
+
+			&.is-active {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&__a {
+		color: $header-link;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		transition: $transition;
+
+		@include tablet {
+			color: $black;
+		}
+
+		&.is-active,
+		&:hover {
+			color: $header-link-active;
+		}
+	}
+}
