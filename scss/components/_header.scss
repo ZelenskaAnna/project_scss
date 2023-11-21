@@ -1,70 +1,78 @@
 .header {
-	padding: 16px 0;
+  padding: 16rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $body-bg;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 
-	.container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 20px;
-	}
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20rem;
+  }
 
-	&__logo {
-		color: #FFF;
-		font-size: 24px;
-		font-weight: 700;
-		display: flex;
+  &__logo {
+    color: #fff;
+    font-size: 24rem;
+    font-weight: 700;
+    display: flex;
 
-		span {
-			color: $primary-color;
-		}
-	}
+    span {
+      color: $primary-color;
+    }
+  }
 
-	&__menu {
-		display: none;
+  &__menu {
+    display: none;
 
-		@include tablet {
-			display: inline-block;
-		}
-	}
+    @include tablet {
+      display: inline-block;
+	  font-size: 40rem;
+    }
+  }
 
-	&__nav {
-		display: flex;
-		gap: 27px;
-		align-items: center;
+  &__nav {
+    display: flex;
+    gap: 27rem;
+    align-items: center;
+    z-index: 2;
 
-		@include tablet {
-			position: fixed;
-			min-width: 250px;
-			width: 30%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			flex-direction: column;
-			background: $primary-color;
-			justify-content: center;
-			transition: $transition;
-			transform: translateX(-120%);
+    @include tablet {
+      position: fixed;
+      min-width: 250rem;
+      width: 30%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      background: $primary-color;
+      justify-content: center;
+      transition: $transition;
+      transform: translateX(-120%);
 
-			&.is-active {
-				transform: translateX(0);
-			}
-		}
-	}
+      &.is-active {
+        transform: translateX(0);
+      }
+    }
+  }
 
-	&__a {
-		color: $header-link;
-		font-size: 16px;
-		font-weight: 400;
-		text-transform: uppercase;
-		transition: $transition;
+  &__a {
+    color: $header-link;
+    font-size: 16rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: $transition;
 
-		@include tablet {
-			color: $black;
-		}
+    @include tablet {
+      color: $black;
+    }
 
-		&.is-active,
-		&:hover {
-			color: $header-link-active;
-		}
-	}
+    &.is-active,
+    &:hover {
+      color: $header-link-active;
+    }
+  }
 }

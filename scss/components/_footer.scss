@@ -1,0 +1,41 @@
+.footer {
+  padding: 56rem 0;
+
+  .container {
+    text-align: center;
+  }
+
+  &__title {
+    color: $title-color;
+    font-size: 40rem;
+    font-weight: 700;
+  }
+
+  &__desc {
+    @include desc;
+    margin-top: 24rem;
+    margin-bottom: 56rem;
+    max-width: 685rem;
+    margin-inline: auto;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 16rem;
+  }
+
+  &__a {
+    transform: scale(1);
+    transition: $transition;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    &:hover {
+        filter: invert(1);
+    }
+  }
+}

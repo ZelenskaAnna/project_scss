@@ -1,9 +1,30 @@
+@mixin title-main {
+  color: $title-color;
+  font-size: 42rem;
+  font-weight: 700;
+  line-height: 64rem;
+}
+@mixin title-second {
+  color: $primary-color;
+  font-size: 42rem;
+  font-weight: 700;
+  line-height: 64rem;
+}
+@mixin desc {
+  color: $desc-color;
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: 27rem;
+}
+
+
 // MEDIA QUERIES
 @mixin desktop-small {
   @media (max-width: $desktop-small) {
     @content;
+    }
   }
-}
+
 
 @mixin tablet-small {
   @media (max-width: $tablet-small) {
@@ -27,3 +48,4 @@
     @content;
   }
 }
+

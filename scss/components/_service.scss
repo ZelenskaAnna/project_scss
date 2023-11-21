@@ -1,68 +1,58 @@
 .service {
-  padding: 96px 0;
+  padding: 96rem 0;
   background: $section-bg;
   @include mobile {
-    padding: 60px 0;
-  }
-
-  .container {
-    display: block;
+    padding: 60rem 0;
   }
 
   &__title {
-    color: $title-color;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 64px;
+    @include title-main;
 
     span {
-      color: $primary-color;
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 64px;
+      @include title-second;
     }
   }
 
   &__desc {
-    color: $desc-color;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    margin-top: 24px;
-    margin-bottom: 56px;
-    max-width: 461px;
+    @include desc;
+    margin-top: 24rem;
+    margin-bottom: 56rem;
+    max-width: 461rem;
   }
   .service-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(286rem, 1fr));
+    gap: 30rem;
   }
   .service-list-item {
     display: flex;
     flex-direction: column;
     background: $body-bg;
-    padding: 32px;
+    padding: 32rem;
     align-items: center;
     text-align: center;
+    transform: scale(1);
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+
 
     &__img {
-      max-width: 40px;
+      max-width: 40rem;
     }
 
     &__title {
-      margin-top: 32px;
-      margin-bottom: 16px;
+      margin-top: 32rem;
+      margin-bottom: 16rem;
       color: $title-color;
-      font-size: 26px;
+      font-size: 26rem;
       font-weight: 700;
-      line-height: 41px;
+      line-height: 41rem;
     }
 
     &__desc {
-      color: $desc-color;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 27px;
+      @include desc;
     }
   }
 }

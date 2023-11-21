@@ -1,0 +1,97 @@
+.contact {
+  padding: 96rem 0;
+  @include mobile {
+    padding: 60rem 0;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20rem;
+  }
+
+  &__title {
+    @include title-main;
+
+     span {
+      @include title-second
+    }
+  }
+
+  &__desc {
+    @include desc;
+    margin-top: 24rem;
+    margin-bottom: 56rem;
+    max-width: 685rem;
+    margin-inline: auto;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    @include tablet-small {
+      flex-direction: column;
+      gap: 30rem;
+    }
+  }
+
+  &__type {
+    color: $primary-color;
+    font-size: 16rem;
+    font-weight: 700;
+    line-height: 41rem;
+    a {
+      color: $title-color;
+      font-size: 16rem;
+      font-weight: 400;
+      line-height: 41rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+    max-width: 540rem;
+    width: 100%;
+    @include tablet-small {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__input {
+      display: block;
+      max-width: 350rem;
+      width: 100%;
+      color: $title-color;
+      font-family: $ff;
+      font-size: 16rem;
+      font-weight: 400;
+      line-height: 41rem;
+      padding-left: 18rem;
+      @include tablet-small {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    &__textarea {
+      display: block;
+      width: 100%;
+      color: $title-color;
+      font-family: $ff;
+      font-size: 16rem;
+      font-weight: 400;
+      line-height: 41rem;
+      padding-left: 18rem;
+      min-height: 166rem;
+      max-height: 300rem;
+      resize: vertical;
+    }
+  }
+
+  &__btn {
+    padding: 16rem 20rem;
+  }
+}

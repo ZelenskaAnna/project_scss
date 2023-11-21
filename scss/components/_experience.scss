@@ -1,0 +1,76 @@
+.experience {
+  padding: 85rem 0;
+  background: $section-bg;
+  @include mobile {
+    padding: 50rem 0;
+  }
+
+  &__title {
+    @include title-main;
+
+    span {
+      @include title-second;
+    }
+  }
+
+  &__desc {
+    @include desc;
+    margin-top: 24rem;
+    margin-bottom: 80rem;
+    max-width: 730rem;
+  }
+
+  .experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(272rem, 1fr));
+    gap: 29rem;
+  }
+  .experience-list-item {
+    display: flex;
+    flex-direction: column;
+    background: $body-bg;
+    padding: 32rem;
+    transform: scale(1);
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2) {
+      max-width: 336rem;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      max-width: 366rem;
+    }
+
+    &__data {
+      color: $title-color;
+      font-size: 20rem;
+      font-weight: 400;
+      line-height: 27rem;
+      margin-bottom: 8rem;
+    }
+
+    &__title {
+      color: $primary-color;
+      font-size: 26rem;
+      font-weight: 700;
+      line-height: 41rem;
+      margin-bottom: 4rem;
+    }
+
+    &__programm {
+      color: $title-color;
+      font-size: 16rem;
+      font-weight: 700;
+      line-height: 27rem;
+      margin-bottom: 8rem;
+    }
+
+    &__desc {
+      @include desc;
+    }
+  }
+}

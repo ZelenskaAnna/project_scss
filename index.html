@@ -13,22 +13,22 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<a href="/" class="header__logo">About <span>Me.</span></a>
+				<a href="#welcome" class="header__logo">About <span>Me.</span></a>
 				<div class="header__nav" id="headerNav">
-					<a href="/" class="header__a is-active">Home</a>
-					<a href="/" class="header__a">About</a>
-					<a href="/" class="header__a">Service</a>
-					<a href="/" class="header__a">Portfolio</a>
-					<a href="/" class="header__a">Resume</a>
+					<a href="#welcome" class="header__a is-active">Home</a>
+					<a href="#about" class="header__a">About</a>
+					<a href="#service" class="header__a">Service</a>
+					<a href="#portfolio" class="header__a">Portfolio</a>
+					<a href="#experience" class="header__a">Resume</a>
 					<a href="/" class="header__a">Blog</a>
-					<a href="/" class="header__a">ContAct</a>
+					<a href="#contact" class="header__a">Contact</a>
 				</div>
 				<span class="material-icons header__menu" onclick="navToggle()">
 					menu
 				</span>
 			</div>
 		</header>
-		<section class="welcome">
+		<section class="welcome" id="welcome">
 			<div class="container">
 				<div class="welcome__info">
 					<h3 class="welcome__hello">Hello, Welcome</h3>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<div class="about__img">
 					<img src="./img/man-2.png" alt="Man">
@@ -59,7 +59,7 @@
 					<a href="/" class="btn about__btn">Contact us</a>
 				</div>
 		</section>
-		<section class="service">
+		<section class="service" id="service">
 			<div class="container">
 				<div class="service__info">
 					<h2 class="service__title">My <span>Service</span></h2>
@@ -95,15 +95,17 @@
 				</div>
 			</div>
 		</section>
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<div class="container">
-				<h2 class="portfolio__title">My <span>Portfolio</span></h2>
-				<p class="portfolio__desc">There are many variations of passages ofLorem Ipsum
-					available, but the majority havesuffered alteration in some
-					form, by injected humour,</p>
+				<div class="portfolio__info">
+					<h2 class="portfolio__title">My <span>Portfolio</span></h2>
+					<p class="portfolio__desc">There are many variations of passages ofLorem Ipsum
+						available, but the majority havesuffered alteration in some
+						form, by injected humour,</p>
+				</div>
 				<div class="portfolio__example">
-					<img src="./img/portfolio1.png" alt="Example" class="portfolio__img">
 					<div class="portfolio__example-group1">
+						<img src="./img/portfolio1.png" alt="Example" class="portfolio__img">
 					</div>
 					<div class="portfolio__example-group2">
 						<img src="./img/portfolio2.png" alt="Example" class="portfolio__img">
@@ -116,9 +118,90 @@
 				</div>
 			</div>
 		</section>
-		<section class="experience"></section>
-		<section class="contact"></section>
-		<footer class="footer"></footer>
+		<section class="experience" id="experience">
+			<div class="container">
+				<div class="experience__info">
+					<h2 class="experience__title">My <span>Experiences</span></h2>
+					<p class="experience__desc">There are many variations of passages ofLorem Ipsum
+						available, but the majority havesuffered alteration in some
+						form, by injected humour,</p>
+				</div>
+				<div class="experience-list">
+					<div class="experience-list-item">
+						<h4 class="experience-list-item__data">June-2002 - 2020</h4>
+						<h3 class="experience-list-item__title">UX/UI Designer</h3>
+						<h5 class="experience-list-item__programm">Figma </h5>
+						<p class="experience-list-item__desc">There are many variations of passages of Lorem Ipsumav
+							ailable, but the majority have suffered
+							alteration in some </p>
+					</div>
+					<div class="experience-list-item">
+						<h4 class="experience-list-item__data">June-2002 - 2020</h4>
+						<h3 class="experience-list-item__title">Product Designer</h3>
+						<h5 class="experience-list-item__programm">Adobe Photoshop</h5>
+						<p class="experience-list-item__desc">There are many variations of passages of Lorem Ipsumav
+							ailable, but the majority have suffered
+							alteration in some </p>
+					</div>
+					<div class="experience-list-item">
+						<h4 class="experience-list-item__data">June-2002 - 2020</h4>
+						<h3 class="experience-list-item__title">Graphic Designer</h3>
+						<h5 class="experience-list-item__programm">Adobe Photoshop</h5>
+						<p class="experience-list-item__desc">There are many variations of passages of Lorem Ipsumav
+							ailable, but the majority have suffered
+							alteration in some </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact" id="contact">
+			<div class="container">
+				<h2 class="contact__title">Contact <span>Me</span></h2>
+				<p class="contact__desc">There are many variations of passages ofLorem Ipsumavailable, but the majority
+					havesuffered alteration in some form, by injected humour,</p>
+				<div class="contact__contact">
+					<div class="contact__info">
+						<h5 class="contact__type">Address _ <a class="contact__adress" href="/">23 S 80 Road,
+								Benedict,ne, 68316
+								United States</a></h5>
+						<h5 class="contact__type">Phone _ <a href="tel:+01123456789">+01 123 456 789</a></h5>
+						<h5 class="contact__type">E mail _ <a href="mailto:abc.xyz@gmail.com">abc.xyz@gmail.com</a></h5>
+						<h5 class="contact__type">Website _ <a href="/">www.abc.xyz.com</a></h5>
+					</div>
+					<div class="contact__form">
+						<label>
+							<input class="contact__form__input" required type="text" placeholder="Name">
+						</label>
+						<label>
+							<textarea class="contact__form__textarea" placeholder="Message"></textarea>
+						</label>
+						<div><a href="/" class="btn contact__btn">Contact us</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<h2 class="footer__title">AboutMe.</h2>
+				<p class="footer__desc">There are many variations of passages ofLorem Ipsumavailable, but the majority
+					havesuffered alteration in some form, </p>
+				<div class="footer__socials">
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/facebook.svg"
+							alt="Facebook"></a>
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/twitter.svg"
+							alt="Twitter"></a>
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/linkedin.svg"
+							alt="Lindekin"></a>
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/instagram.svg"
+							alt="Instagram"></a>
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/youtube.svg"
+							alt="Youtube"></a>
+					<a href="/" class="footer__a"><img class="footer__img" src="./img/icons/pinterest.svg"
+							alt="Pinterest"></a>
+				</div>
+
+			</div>
+		</footer>
 	</div>
 
 

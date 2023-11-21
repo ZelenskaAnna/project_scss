@@ -1,14 +1,14 @@
 .about {
-  padding: 96px 0;
+  padding: 96rem 0;
   @include mobile {
-    padding: 60px 0;
+    padding: 60rem 0;
   }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 20rem;
     @include mobile {
       flex-direction: column;
     }
@@ -18,9 +18,9 @@
     flex-shrink: 0;
     position: relative;
 
-    // img {
-    //   z-index: 2;
-    // }
+    @include desktop-small {
+      margin-left: 30rem;
+    }
 
     @include tablet {
       flex-shrink: inherit;
@@ -30,48 +30,49 @@
   &__img-backdrop {
     position: absolute;
     width: 100%;
-    right: 35px;
-    top: 10px;
-    height: calc(100% + 25px);
-    border-radius: 24px;
-    border: 16px solid #EAB308;
+    right: 35rem;
+    top: 10rem;
+    height: calc(100% + 25rem);
+    border-radius: 24rem;
+    border: 16rem solid $primary-color;
     z-index: -1;
+    @include tablet-small {
+      width: 100%;
+      right: 28rem;
+      top: 5rem;
+      height: calc(100% + 15rem);
+      border: 10rem solid $primary-color;
+    }
   }
 
   &__title {
-    color: $title-color;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 64px;
+    @include title-main;
+    @include tablet {
+      margin-top: 20rem;
+    }
 
     span {
-      color: $primary-color;
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 64px;
+      @include title-second;
     }
   }
 
   &__role {
-    max-width: 461px;
+    max-width: 461rem;
     color: $desc-color;
-    font-size: 16px;
+    font-size: 16rem;
     font-weight: 400;
-    line-height: 27px;
-    margin-top: 32px;
-    margin-bottom: 18px;
+    line-height: 27rem;
+    margin-top: 32rem;
+    margin-bottom: 18rem;
   }
 
   &__desc {
-    max-width: 509px;
-    color: $desc-color;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    margin-bottom: 40px;
+    @include desc;
+    max-width: 509rem;
+    margin-bottom: 40rem;
   }
 
   &__btn {
-    padding: 16px 20px;
+    padding: 16rem 20rem;
   }
 }

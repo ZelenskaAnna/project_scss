@@ -1,3 +1,8 @@
+html {
+	font-size: 1px;
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: $ff;
 	background: $body-bg;
@@ -5,7 +10,7 @@ body {
 }
 
 .container {
-	max-width: calc(1108px + 40px);
-	padding: 0 20px;
+	max-width: calc(1108rem + 40rem);
+	padding: 0 20rem;
 	margin-inline: auto;
 }
